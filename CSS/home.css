@@ -1,0 +1,80 @@
+#home{
+    display: flex;
+    min-height: calc(100vh - 100px);
+    position: relative;
+}
+
+#cta{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+}
+
+#cta .title {
+    font-size: 4rem;
+    color: white;
+}
+
+#cta .title span{
+    color: royalblue;
+}
+
+#cta .description{
+    font-size: 1.2rem;
+
+}
+
+#cta_buttons {
+    display: flex;
+    gap: 24px;
+}
+
+#cta_buttons a{
+    text-decoration: none;
+    color:white;
+}
+
+#phone_button{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: white;
+    padding: 8px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+#banner {
+    display: flex;
+    justify-content: flex-end; /* Move a imagem para a direita */
+    align-items: center;
+    width: 100%;
+    margin-top: 20px; /* Adiciona uma margem superior conforme necessário */
+    padding-right: 20px; /* Adiciona espaço à direita para separar a imagem da margem */
+    padding-left: 20px; /* Adiciona espaço à esquerda para separar a imagem da margem */
+    
+}
+
+#banner img {
+    height: 850px; /* Ajusta a altura da imagem para 400 pixels (ou conforme necessário) */
+    width: auto; /* Define a largura da imagem como automática para manter a proporção */
+    margin-left: 10px; /* Adiciona margem à esquerda para separar o texto da imagem */
+    margin-top: -860px; /* Move a imagem para cima (ajuste conforme necessário) */
+    object-fit: cover; /* Mantém a proporção da imagem e ajusta seu tamanho */
+    z-index: 2;
+}
+
+.shape{
+    background-color: dodgerblue;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40% 30% 0% 20%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
