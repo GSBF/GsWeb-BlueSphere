@@ -1,0 +1,78 @@
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: deepskyblue;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#techs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 18px;
+    padding: 20px;
+    background-color: white;
+    width: 200px;
+}
+
+.techlogo {
+    font-size: 50px;
+    color: royalblue;
+}
+
+.tech-image {
+    width: 100px;
+    height: 100px;
+}
+
+.tech-title {
+    font-size: 1.125rem;
+    color: royalblue;
+    text-align: center;
+}
+
+.tech-description {
+    font-size: 0.875rem;
+    color: gray;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    #techs {
+        flex-direction: column; /* Altera a direção do flexbox para coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .tech {
+        width: 80%; /* Define uma largura menor para as tecnologias */
+        margin-bottom: 20px; /* Adiciona um espaçamento inferior entre as tecnologias */
+    }
+
+    #menu {
+        padding: 20px; /* Adiciona um espaçamento interno */
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .tech {
+        width: 100%; /* Define a largura total para as tecnologias */
+    }
+
+    #menu {
+        align-items: flex-start; /* Alinha os itens no início da coluna */
+    }
+}
+

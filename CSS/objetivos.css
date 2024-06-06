@@ -1,0 +1,26 @@
+#objectives {
+    padding: 20px 8%;
+    background-color: deepskyblue;
+    margin-top: 32px;
+}
+
+#objectives-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.objective {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.objective-title {
+    font-size: 24px;
+    color: royalblue;
+    margin-bottom: 10px;
+}
+
+.objective-description {
+    font-size: 18px;
+}

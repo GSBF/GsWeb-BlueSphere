@@ -62,7 +62,7 @@
     height: 850px; /* Ajusta a altura da imagem para 400 pixels (ou conforme necessário) */
     width: auto; /* Define a largura da imagem como automática para manter a proporção */
     margin-left: 10px; /* Adiciona margem à esquerda para separar o texto da imagem */
-    margin-top: -860px; /* Move a imagem para cima (ajuste conforme necessário) */
+    margin-top: -3760px; /* Move a imagem para cima (ajuste conforme necessário) */
     object-fit: cover; /* Mantém a proporção da imagem e ajusta seu tamanho */
     z-index: 2;
 }
@@ -70,11 +70,41 @@
 .shape{
     background-color: dodgerblue;
     width: 50%;
-    height: 100%;
+    height: 85%;
     position: absolute;
     border-radius: 40% 30% 0% 20%;
     top: 0;
     right: 0;
     z-index: 1;
+    margin-right: 30px;
+    margin-top: 120px;
 }
 
+@media screen and (max-width: 1170px) {
+    #home{
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #banner,
+    #banner img,
+    #home .shape {
+        display: none;
+    }
+
+
+    #cta {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    #phone_button button {
+        display: none;
+    }
+    
+}
