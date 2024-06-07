@@ -62,7 +62,7 @@
     height: 850px; /* Ajusta a altura da imagem para 400 pixels (ou conforme necessário) */
     width: auto; /* Define a largura da imagem como automática para manter a proporção */
     margin-left: 10px; /* Adiciona margem à esquerda para separar o texto da imagem */
-    margin-top: -9060px; /* Move a imagem para cima (ajuste conforme necessário) */
+    margin-top: -700%; /* Move a imagem para cima (ajuste conforme necessário) */
     object-fit: cover; /* Mantém a proporção da imagem e ajusta seu tamanho */
     z-index: 2;
     animation: swim 5s ease-in-out infinite;
