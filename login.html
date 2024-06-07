@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/login.css"> <!-- Adicionando arquivo de estilo específico para a página de login -->
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo-container">
+                <a href="index.html"> <!-- Adicionando um link para redirecionar para o index.html -->
+                    <img src="img/logo.png" alt="logo" id="logo">
+                    <span class="logo-text">BlueSphere</span>
+                </a>
+            </div>
+            <ul id="nav_list">
+                <!-- Adicione os itens de menu aqui, se necessário -->
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <h1>Login</h1>
+        <form id="login_form" action="">
+            <label for="username">Nome de usuário:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Entrar">
+          </form>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script> <!-- Incluindo arquivo de script específico para a página de login -->
+</body>
+</html>

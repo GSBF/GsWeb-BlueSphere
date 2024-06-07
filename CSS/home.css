@@ -65,6 +65,7 @@
     margin-top: -7460px; /* Move a imagem para cima (ajuste conforme necessário) */
     object-fit: cover; /* Mantém a proporção da imagem e ajusta seu tamanho */
     z-index: 2;
+    animation: swim 5s ease-in-out infinite;
 }
 
 .shape{
@@ -116,4 +117,10 @@
       display: none;
     }
   }
+
+  @keyframes swim {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
 
