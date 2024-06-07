@@ -1,0 +1,63 @@
+/* Section styling */
+#public {
+    min-height: calc(100vh - 100px);
+    position: relative; /* Removed as it's not needed without the shape */
+    padding-top: 100px;
+  }
+  
+  /* Content styling */
+  #public-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Maintains centering */
+    padding: 50px;
+  }
+  
+  #public h2.section-title {
+    color: black;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  #public h3.section-subtitle {
+    color: royalblue;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  
+ 
+.public-item {
+  display: flex; /* Maintains flexbox layout */
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: center; /* Centers content horizontally */
+  margin-bottom: 20px;
+}
+
+.public-item i {
+  font-size: 24px;
+  margin-bottom: 10px; /* Adds space between icon and title */
+  color: #333;
+  font-weight: bold;
+}
+
+.public-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: royalblue;
+  margin-bottom: 5px; /* Adds space between title and description (optional) */
+}
+
+.public-description {
+  font-size: 16px;
+  color: black;
+  text-align: center; /* Centers text within the item */
+}
+
+/* Media query for small screens (optional) */
+@media screen and (max-width: 768px) {
+  #public-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
