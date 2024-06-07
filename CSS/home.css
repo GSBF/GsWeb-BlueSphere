@@ -1,15 +1,17 @@
-#home{
+#home {
     display: flex;
     min-height: calc(100vh - 100px);
     position: relative;
+    align-items: center;
 }
 
-#cta{
+#cta {
     width: 35%;
     display: flex;
     flex-direction: column;
     gap: 28px;
-    margin-top: 5%;
+    margin-left: 5%;
+    z-index: 2; /* Garantir que o CTA esteja acima da baleia */
 }
 
 #cta .title {
@@ -17,13 +19,12 @@
     color: white;
 }
 
-#cta .title span{
+#cta .title span {
     color: royalblue;
 }
 
-#cta .description{
+#cta .description {
     font-size: 1.2rem;
-
 }
 
 #cta_buttons {
@@ -31,97 +32,80 @@
     gap: 24px;
 }
 
-#cta_buttons a{
+#cta_buttons a {
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
-#phone_button{
+#phone_button {
     display: flex;
     gap: 8px;
     align-items: center;
     background-color: royalblue;
     padding: 8px 14px;
     font-weight: 500;
-    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
 }
 
 #banner {
-    display: flex;
-    justify-content: flex-end; /* Move a imagem para a direita */
-    align-items: center;
-    width: 100%;
-    margin-top: 20px; /* Adiciona uma margem superior conforme necessário */
-    padding-right: 20px; /* Adiciona espaço à direita para separar a imagem da margem */
-    padding-left: 20px; /* Adiciona espaço à esquerda para separar a imagem da margem */
-    
-    
+    display: none; /* Remover o banner fora da seção #home */
 }
 
-#banner img {
-    height: 850px; /* Ajusta a altura da imagem para 400 pixels (ou conforme necessário) */
-    width: auto; /* Define a largura da imagem como automática para manter a proporção */
-    margin-left: 10px; /* Adiciona margem à esquerda para separar o texto da imagem */
-    margin-top: -700%; /* Move a imagem para cima (ajuste conforme necessário) */
-    object-fit: cover; /* Mantém a proporção da imagem e ajusta seu tamanho */
-    z-index: 2;
-    animation: swim 5s ease-in-out infinite;
-}
-
-.shape{
+.shape {
     background-color: dodgerblue;
-    width: 50%;
-    height: 65%;
+    width: 45%;
+    height: 60%;
     position: absolute;
-    border-radius: 40% 0% 0% 1%;
-    top: 0;
+    border-radius: 40% 0% 0% 40%;
+    top: 20%; /* Ajuste a posição para baixo */
     right: 0;
-    z-index: 1;
-    margin-right: 30px;
-    margin-top: 200px;
+    z-index: 1; /* Abaixo da baleia */
+    margin-right: 20px;
 }
 
+.shape-baleia {
+    position: absolute;
+    right: 10%; /* Ajuste a posição da baleia para a esquerda */
+    bottom: 10%; /* Ajuste a posição da baleia para cima */
+    z-index: 2; /* Baleia acima da forma */
+}
 
+.shape-baleia .baleia {
+    height: 700px; /* Ajuste conforme necessário */
+    width: auto;
+    object-fit: cover;
+    animation: swim 5s ease-in-out infinite;
+    margin-bottom: 100px;
+}
 
 @media screen and (max-width: 1170px) {
-    #home{
+    #home {
         min-height: 100%;
         padding-top: 0px;
+        flex-direction: column;
     }
 
-    #banner,
-    #banner img,
-    #home .shape {
+    .shape,
+    .shape-baleia {
         display: none;
     }
-
 
     #cta {
         width: 100%;
         text-align: center;
         align-items: center;
     }
-
 }
 
 @media screen and (max-width: 450px) {
-
     #phone_button button {
         display: none;
     }
-    
 }
 
-@media screen and (max-width: 1170px) {
-    .shape {
-      display: none;
-    }
-  }
-
-  @keyframes swim {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(10deg); }
-    100% { transform: rotate(0deg); }
+@keyframes swim {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(5px, -5px) rotate(10deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
 }
-
